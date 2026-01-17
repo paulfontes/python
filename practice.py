@@ -9,3 +9,8 @@ print(sum_nums(3, 4))
 def power_nums(num1, num2):
     return num1 ** num2
 print(power_nums(2, 4))
+
+def combine_words(word_1, word_2):
+    return word_1 + word_2
+
+print(combine_words('Howdy', 'Partner'))
