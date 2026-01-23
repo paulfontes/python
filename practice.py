@@ -14,3 +14,10 @@ def combine_words(word_1, word_2):
     return word_1 + word_2
 
 print(combine_words('Howdy', 'Partner What is going on here!!'))
+
+def divide_nums(num1, num2):
+    if num1 % num2 == 0:
+        return num1 % num2
+    else: return 'num1 needs to be divisable by num2!'
+
+print(divide_nums(10,5))
