@@ -1,7 +1,5 @@
 import math
 import random
-print('Pick rock, paper or scissors!')
-player_pick = input()
 # def sum_nums(num_1, num_2):
 #     print(f'The sum of {num_1} + {num_2} is {num_1 + num_2} ')
 #     return num_1 + num_2
@@ -24,27 +22,37 @@ player_pick = input()
 
 # print(divide_nums(10,5))
 
+print('Pick rock, paper or scissors!')
+player_pick = input().lower()
+player_score = 0
+computer_score = 0
 
 def rock_paper_scissors(player, computer):
-    input
+    if player not in ['rock', 'paper', 'scissors']:
+        return 'invalid choice!'
     if player == computer:
         return 'tie'
     elif(player == "rock" and computer == "scissors"):
-        return 'player wins!'
+        player_score += 1
+        return f'player wins! Player Score: {player_score} Computer Score: {computer_score} first to 5 wins!'
     elif(player == 'scissors' and computer == 'paper'):
-        return 'player wins!'
+        player_score += 1
+        return f'player wins! Player Score: {player_score} Computer Score: {computer_score} first to 5 wins!'
     elif(player == 'paper' and computer == 'rock'):
-        return 'player wins!'
-    else: return 'computer wins!'
+        player_score += 1
+        return f'player wins! Player Score: {player_score} Computer Score: {computer_score} first to 5 wins!'
+    else: 
+        computer_score += 1
+        return f'computer wins! Player Score: {player_score} Computer Score: {computer_score} first to 5 wins!'
 
 def computer_pick():
     computer_picked = ''
     random_number = random.randint(1, 3)
-    if random_number is 1:
+    if random_number == 1:
         computer_picked = 'rock'
         print(f'computer picked {computer_picked}')
         return computer_picked
-    elif random_number is 2:
+    elif random_number == 2:
         computer_picked = 'paper'
         print(f'computer picked {computer_picked}')
         return computer_picked
@@ -53,6 +61,7 @@ def computer_pick():
         print(f'computer picked {computer_picked}')
         return computer_picked
     
+
 
 print(rock_paper_scissors(player_pick, computer_pick()))
 # print(rock_paper_scissors('paper', 'rock'))
